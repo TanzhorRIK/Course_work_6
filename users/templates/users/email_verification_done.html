@@ -1,0 +1,10 @@
+{% extends 'mailing/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="col-md-9">
+    {% csrf_token %}
+    <h1>Активация прошла успешно</h1>
+    <p>Ваш аккаунт успешно создан. Теперь вы можете войти на сайт.</p>
+</div>
+{% endblock %}
