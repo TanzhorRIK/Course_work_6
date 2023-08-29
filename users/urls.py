@@ -11,7 +11,6 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegisterView.as_view(), name='register'),
     path('update/', UserUpdateView.as_view(), name='update'),
-    path('register/', RegisterView.as_view(), name='register'),
     path('verify/<str:uidb64>/', activate_account, name='email_verification'),
     path('success', ActivationOk.as_view(), name='activation_ok'),
     path('failed', ActivationFailed.as_view(), name='activation_failed'),
