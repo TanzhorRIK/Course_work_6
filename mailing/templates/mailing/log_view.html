@@ -4,17 +4,17 @@
 {% block content %}
 <div class="col-md-9">
 
-    <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+    <div class="d-flex flex-column h-70 justify-content-center align-items-center">
         <h1> Отчет по рассылкам </h1>
         <h5> Справка: </h5>
         <h5> АС  - активна, FI - закончена, CR - создана </h5>
         <h5> Переодичность: DL  -день, WL  неделя, ML - месяц</h5>
-
+        <p></p>
 
         {% for object in object_list %}
-        {% if user.status_type == 'MANAGER' or user == object.mailing.author or user.is_superuser %}
+        {% if object.status_type == 'MANAGER' or user == object.mailing.author or object.is_superuser %}
 
-        <div class="col-md-5 ">
+        <div class="container text-left">
             статус рассылки (на момент создания)/время начала рассылки/периодичность:{{ object.mailing }} <br>
             дата и время последней попытки: {{ object.mailing_try }} <br>
             статус рассылки: {{ object.mailing_try_status }} <br>
