@@ -34,7 +34,6 @@ class MailingSettings(models.Model):
     class Meta:
         verbose_name = 'Настройка рассылки'
         verbose_name_plural = 'Настройки рассылки'
-        ordering = ["mailing_status"]
 
 
 class Mail(models.Model):
