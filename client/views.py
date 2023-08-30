@@ -17,14 +17,14 @@ class ClientCreateView(LoginRequiredMixin, CreateView):
 class ClientListView(LoginRequiredMixin, ListView):
 
     model = MailingClient
-    template_name = 'client/сlient_list.html'
+    template_name = 'client/client_list.html'
     paginate_by = 6
 
 
 class ClientsDetailView(LoginRequiredMixin, DetailView):
 
     model = MailingClient
-    template_name = 'client/сlient_detail.html'
+    template_name = 'client/client_detail.html'
     context_object_name = 'item'
     pk_url_kwarg = 'pk'
 
