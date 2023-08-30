@@ -17,8 +17,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-dot_env = os.path.join(BASE_DIR, '.env')
+dot_env = os.path.join(BASE_DIR, '.env.sample')
 load_dotenv(dotenv_path=dot_env)
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -116,9 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 # выбор языка
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Novosibirsk'
 
 USE_I18N = True
 
@@ -145,7 +144,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-
 DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
 
 EMAIL_HOST = 'smtp.yandex.com'
@@ -154,8 +152,6 @@ EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
-
-
 
 CACHE_ENABLED = False
 if CACHE_ENABLED:

@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=.."
+set "VIRTUAL_ENV=C:\Users\Tanzh\py_project\pythonProject"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
@@ -38,4 +38,4 @@ if defined _OLD_VIRTUAL_PATH goto ENDIFVPATH2
 
 set "PATH=%VIRTUAL_ENV%\Scripts;%PATH%"
 
-python ".." start_mail
+python "C:\Users\Tanzh\py_project\pythonProject" start_mail
