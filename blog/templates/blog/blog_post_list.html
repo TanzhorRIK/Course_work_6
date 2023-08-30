@@ -7,7 +7,7 @@
         <h1 class="text-center title">Записи в блогах</h1>
         {% if user.is_authenticated %}
 
-            <a class="btn btn-success " href={% url 'blog:create' %}>создать запись</a>
+            <a class="btn btn-success " href="{% url 'blog:create' %}">создать запись</a>
         {% endif %}
 
 
@@ -33,7 +33,7 @@
                                     <p class="card-text">Создано:{{ object.created_at }} </p>
                                     <p class="card-text">Количество просмотров:{{ object.views_count }} </p>
 
-                                    <a class="detail" type="submit" href={% url 'blog:detail' object.slug %}><p>
+                                    <a class="detail" type="submit" href="{% url 'blog:detail' object.slug %}"><p>
                                         Подробнее...</p></a>
 
 
@@ -57,5 +57,6 @@
                 {% endif %}
             </div>
         </div>
+    </div>
     </div>
 {% endblock %}
